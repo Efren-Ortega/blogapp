@@ -57,7 +57,7 @@ class LoginController(private val loginView: Login) {
         }
 
 
-        val url = ""
+        val url = "http://192.168.1.74:8000/api/login"
 
         val queue = Volley.newRequestQueue(loginView)
         val sharedPreferences = loginView?.getSharedPreferences("Token", AppCompatActivity.MODE_PRIVATE)

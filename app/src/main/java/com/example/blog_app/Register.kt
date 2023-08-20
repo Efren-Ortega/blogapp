@@ -57,7 +57,6 @@ class Register : AppCompatActivity() {
 
         et_nombre = findViewById<EditText>(R.id.et_nombre)
         et_correo = findViewById<EditText>(R.id.et_correo)
-        et_tel = findViewById<EditText>(R.id.et_tel)
         et_confirm_pass = findViewById<EditText>(R.id.et_pass_confirm)
 
         btn = findViewById(R.id.btn_register) as Button
@@ -87,15 +86,12 @@ class Register : AppCompatActivity() {
 
     fun registrar(view : View){
 
-        if(et_nombre.length() == 0 || et_correo.length() == 0 || et_tel.length() == 0 || et_pass.length() < 8 || et_confirm_pass.length() == 0){
+        if(et_nombre.length() == 0 || et_correo.length() == 0 || et_pass.length() < 8 || et_confirm_pass.length() == 0){
             if(et_nombre.length() == 0 ){
                 Snackbar.make(view, "Ingrese su Nombre", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
             }else if(et_correo.length() == 0 ){
                 Snackbar.make(view, "Ingrese su Correo", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-            }else if(et_tel.length() == 0 ){
-                Snackbar.make(view, "Ingrese su Telefono", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
             }else if(et_pass.length() < 8 ){
                 Snackbar.make(view, "Ingrese su Contraseña de 8 caracteres", Snackbar.LENGTH_LONG)
@@ -111,7 +107,7 @@ class Register : AppCompatActivity() {
         }
 
         val queue = Volley.newRequestQueue(this)
-        val url = ""
+        val url = "http://192.168.1.74:8000/api/register"
         val sharedPreferences = this?.getSharedPreferences("Token", MODE_PRIVATE)
 
         val jsonObject = JSONObject()

@@ -61,21 +61,6 @@
         android:hint="Ingresa tu Correo"
         android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/et_tel"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginBottom="30dp"
-        android:textSize="16sp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:drawablePadding="8dp"
-        android:background="@drawable/background_edit_text"
-        android:drawableLeft="@drawable/baseline_smartphone_24"
-        android:ems="10"
-        android:hint="Ingresa tu Telefono"
-        android:inputType="number" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
